@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-public class Test3 extends Test1 {
+public class Test3 extends Driver {
     private By inputForm = By.xpath("//a[text()='Input Forms']");
     private By checkboxDemo = By.xpath("//div[@id='easycont']//a[text()='Checkbox Demo']");
     private By option1 = By.xpath("//label[text()='Option 1']");

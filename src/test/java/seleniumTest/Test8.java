@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class Test8 extends Test1 {
+public class Test8 extends Driver {
     @Test
     public void checkDay() {
         WebElement dataPickers = driver.findElement(By.xpath("//a[text()='Date pickers']"));

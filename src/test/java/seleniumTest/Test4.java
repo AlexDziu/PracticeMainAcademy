@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-public class Test4 extends Test1 {
+public class Test4 extends Driver {
     private By inputForm = By.xpath("//a[text()='Input Forms']");
     private By radioButtonsDemo = By.xpath("//*[@id='treemenu']//a[text()='Radio Buttons Demo']");
     private By sexMale = By.xpath("//div[@class='col-md-6 text-left']//div[2]//div[2]//div//input[@value='Male']");

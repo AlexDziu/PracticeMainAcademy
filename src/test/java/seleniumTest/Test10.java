@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.Color;
 
-public class Test10 extends Test1 {
+public class Test10 extends Driver {
     private By table = By.xpath("//li[@class='tree-branch'][3]");
     private By tableFilter = By.xpath("//ul[@id='treemenu']//a[text()='Table Filter ']");
     private By orangeButton = By.xpath("//button[@class='btn btn-warning btn-filter']");

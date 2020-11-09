@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-public class Test7 extends Test1 {
+public class Test7 extends Driver {
     private By inputForm = By.xpath("//a[text()='Input Forms']");
     private By ajaxFormSubmit = By.xpath("//ul[@id='treemenu']//ul//a[text()='Ajax Form Submit']");
     private By submitButton = By.xpath("//input[@id='btn-submit']");

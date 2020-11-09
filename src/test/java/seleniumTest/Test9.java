@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class Test9 extends Test1 {
+public class Test9 extends Driver {
     @Test
     public void checkRecordAppears() {
         WebElement table = driver.findElement(By.xpath("//li[@class='tree-branch'][3]"));

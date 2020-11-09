@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-public class Test5 extends Test1 {
+public class Test5 extends Driver {
     private By inputForm = By.xpath("//a[text()='Input Forms']");
     private By selectDropDownList = By.xpath("//div[@id='easycont']//a[text()='Select Dropdown List']");
     private By selectListDemo = By.xpath("//select[@id='select-demo']");
