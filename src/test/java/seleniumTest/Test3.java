@@ -16,6 +16,7 @@ public class Test3 extends Test1 {
         option1.click();
         WebElement option3 = driver.findElement(By.xpath("//label[text()='Option 3']"));
         option3.click();
+        Assert.assertTrue(option1.isSelected());
         Assert.assertEquals(option1.isSelected(), option3.isSelected());
 
     }

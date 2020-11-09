@@ -18,5 +18,6 @@ public class Test8 extends Test1 {
         selectDay.click();
         String selectDayField = driver.findElement(By.xpath("//div[@class='input-group date']//input[@type='text']")).getAttribute("value");
         Assert.assertEquals("07/11/2020",selectDayField);
+        //joda time + pom  minus()
     }
 }

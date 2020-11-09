@@ -13,7 +13,7 @@ public class Test2 extends Test1 {
         WebElement simpleFormDemo = driver.findElement(By.xpath("//*[@id='treemenu']//a[text()='Simple Form Demo']"));
         simpleFormDemo.click();
         WebElement enterA = driver.findElement(By.xpath("//form[@id='gettotal']//input[@id='sum1']"));
-        enterA.sendKeys(String.valueOf(2));
+        enterA.sendKeys("2");
         WebElement enterB = driver.findElement(By.xpath("//form[@id='gettotal']//input[@id='sum2']"));
         enterB.sendKeys(String.valueOf(8));
         WebElement buttonGetTotal = driver.findElement(By.xpath("//form[@id='gettotal']//button[@class='btn btn-default']"));
@@ -21,5 +21,6 @@ public class Test2 extends Test1 {
         String total = driver.findElement(By.xpath("//*[@id='displayvalue']")).getText();
         int totalResult = Integer.parseInt(total);
         Assert.assertEquals(10, totalResult);
+        //fix
     }
 }

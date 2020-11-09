@@ -8,6 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class Test6 extends Test1 {
+
+
+
     @Test
     public void checkText() {
         WebElement inputForm = driver.findElement(By.xpath("//a[text()='Input Forms']"));
