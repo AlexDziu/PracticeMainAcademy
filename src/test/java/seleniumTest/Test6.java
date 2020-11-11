@@ -19,13 +19,14 @@ public class Test6 extends Driver {
         selectDropDownList.click();
         WebElement selectNewYork = driver.findElement(By.xpath("//select[@name='States']//option[@value='New York']"));
         WebElement selectFlorida = driver.findElement(By.xpath("//select[@name='States']//option[@value='Florida']"));
+        String expectedText = "Options selected are : " +selectNewYork.getText()+ ","+selectFlorida.getText();
         WebElement getAllSelected = driver.findElement(By.xpath("//button[@id='printAll']"));
         Actions action = new Actions(driver);
-        action.keyDown(Keys.CONTROL).clickAndHold(selectNewYork).build().perform();
-        action.keyDown(Keys.CONTROL).clickAndHold(selectFlorida).build().perform();
+        action.keyDown(Keys.CONTROL).click(selectNewYork).build().perform();
+        action.keyDown(Keys.CONTROL).click(selectFlorida).build().perform();
         getAllSelected.click();
         String optionsSelectedAre = driver.findElement(By.xpath("//p[@class='getall-selected']")).getText();
-        Assert.assertEquals("Options selected are : Florida,New York", optionsSelectedAre);
+        Assert.assertEquals(expectedText, optionsSelectedAre);
 
     }
 }

@@ -20,9 +20,9 @@ public class Test10 extends Driver {
         String expectedColor = "#f0ad4e";
         String color = driver.findElement(orange1).getCssValue("color");
         String color2 = driver.findElement(orange2).getCssValue("color");
-        String hexColor = Color.fromString(color).asHex();
-        String hexColor2 = Color.fromString(color2).asHex();
-        Assert.assertEquals(expectedColor, hexColor);
-        Assert.assertEquals(expectedColor, hexColor2);
+        String actualColor = Color.fromString(color).asHex();
+        String actualColor2 = Color.fromString(color2).asHex();
+        Assert.assertEquals(expectedColor, actualColor);
+        Assert.assertEquals(expectedColor, actualColor2);
     }
 }
