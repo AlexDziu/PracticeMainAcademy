@@ -16,7 +16,7 @@ public class Test15 extends Driver{
         String imageSource = userWebElement.findElement(By.cssSelector("img")).getAttribute("src");
         Assert.assertNotNull(imageSource);
         String firstName = userWebElement.getText().split("\n\n")[0].split(": ")[0];
-        String lastName = userWebElement.getText().split("\n\n")[1].split(": ")[1];
+        String lastName = userWebElement.getText().split("\n\n")[1].split(": ")[0];
         Assert.assertNotNull(firstName);
         Assert.assertNotNull(lastName);
     }
