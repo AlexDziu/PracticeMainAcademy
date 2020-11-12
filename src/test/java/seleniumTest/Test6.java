@@ -9,8 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 
 public class Test6 extends Driver {
 
-
-
     @Test
     public void checkText() {
         WebElement inputForm = driver.findElement(By.xpath("//a[text()='Input Forms']"));
@@ -27,6 +25,5 @@ public class Test6 extends Driver {
         getAllSelected.click();
         String optionsSelectedAre = driver.findElement(By.xpath("//p[@class='getall-selected']")).getText();
         Assert.assertEquals(expectedText, optionsSelectedAre);
-
     }
 }

@@ -16,6 +16,6 @@ public class Test9 extends Driver {
         fieldTasks.sendKeys("Emily John");
         String actualResult = driver.findElement(By.xpath("//table[@id='task-table']//tbody//tr[4]")).getText();
         Assert.assertEquals("4 Bootstrap 3 Emily John in progress", actualResult);
-// 4 assert for evry colums
+// fix 4 assert for every columns
     }
 }

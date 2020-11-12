@@ -23,6 +23,5 @@ public class Test8 extends Driver {
         String expectedDate = yesterday.format(formatter);
         String selectDayField = driver.findElement(By.xpath("//div[@class='input-group date']//input[@type='text']")).getAttribute("value");
         Assert.assertEquals(expectedDate,selectDayField);
-        //joda time + pom  minus() 07/11/2020
     }
 }

@@ -11,18 +11,13 @@ public class Test15 extends Driver{
     public void test15(){
         driver.findElement(By.xpath("//a[text()='Others']")).click();
         driver.findElement(By.xpath("//li[@style]/a[text()='Dynamic Data Loading']")).click();
-
         driver.findElement(By.id("save")).click();
-
         WebElement userWebElement = driver.findElement(By.cssSelector("#loading"));
         String imageSource = userWebElement.findElement(By.cssSelector("img")).getAttribute("src");
         Assert.assertNotNull(imageSource);
         String firstName = userWebElement.getText().split("\n\n")[0].split(": ")[0];
         String lastName = userWebElement.getText().split("\n\n")[1].split(": ")[1];
-
         Assert.assertNotNull(firstName);
         Assert.assertNotNull(lastName);
-
-
     }
 }

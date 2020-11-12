@@ -20,7 +20,5 @@ public class Test3 extends Driver {
         boolean actualResult2 = driver.findElement(option3).findElement(By.cssSelector("input")).isSelected();
         Assert.assertTrue(actualResult);
         Assert.assertTrue(actualResult2);
-
-// fix add 2 asserts find mark elements and assert them
     }
 }
