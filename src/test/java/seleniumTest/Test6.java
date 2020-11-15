@@ -4,26 +4,26 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class Test6 extends Driver {
+    private By inputForm = By.xpath("//a[text()='Input Forms']");
+    private By selectDropDownList = By.xpath("//div[@id='easycont']//a[text()='Select Dropdown List']");
+    private By selectNewYork = By.xpath("//select[@name='States']//option[@value='New York']");
+    private By selectFlorida = By.xpath("//select[@name='States']//option[@value='Florida']");
+    private By getAllSelected = By.xpath("//button[@id='printAll']");
+    private By optionsSelectedAre = By.xpath("//p[@class='getall-selected']");
 
     @Test
     public void checkText() {
-        WebElement inputForm = driver.findElement(By.xpath("//a[text()='Input Forms']"));
-        inputForm.click();
-        WebElement selectDropDownList = driver.findElement(By.xpath("//div[@id='easycont']//a[text()='Select Dropdown List']"));
-        selectDropDownList.click();
-        WebElement selectNewYork = driver.findElement(By.xpath("//select[@name='States']//option[@value='New York']"));
-        WebElement selectFlorida = driver.findElement(By.xpath("//select[@name='States']//option[@value='Florida']"));
-        String expectedText = "Options selected are : " +selectNewYork.getText()+ ","+selectFlorida.getText();
-        WebElement getAllSelected = driver.findElement(By.xpath("//button[@id='printAll']"));
+        driver.findElement(inputForm).click();
+        driver.findElement(selectDropDownList).click();
+        String expectedText = "Options selected are : " +driver.findElement(selectNewYork).getText()+ "," +driver.findElement(selectFlorida).getText();
         Actions action = new Actions(driver);
-        action.keyDown(Keys.CONTROL).click(selectNewYork).build().perform();
-        action.keyDown(Keys.CONTROL).click(selectFlorida).build().perform();
-        getAllSelected.click();
-        String optionsSelectedAre = driver.findElement(By.xpath("//p[@class='getall-selected']")).getText();
-        Assert.assertEquals(expectedText, optionsSelectedAre);
+        action.keyDown(Keys.CONTROL).click(driver.findElement(selectNewYork)).build().perform();
+        action.keyDown(Keys.CONTROL).click(driver.findElement(selectFlorida)).build().perform();
+        driver.findElement(getAllSelected).click();
+        String actualText = driver.findElement(optionsSelectedAre).getText();
+        Assert.assertEquals(expectedText, actualText);
     }
 }

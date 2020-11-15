@@ -3,25 +3,26 @@ package seleniumTest;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Test8 extends Driver {
+    private By dataPickers = By.xpath("//a[text()='Date pickers']");
+    private By bootstrapDataPicker = By.xpath("//div[@class='container-fluid text-center']//a[text()='Bootstrap Date Picker']");
+    private By dataExampleSelectDay = By.xpath("//div[@id='sandbox-container1']//input[@class='form-control']");
+    private By selectDayField = By.xpath("//div[@class='input-group date']//input[@type='text']");
+
     @Test
     public void checkDay() {
-        WebElement dataPickers = driver.findElement(By.xpath("//a[text()='Date pickers']"));
-        dataPickers.click();
-        WebElement bootstrapDataPicker = driver.findElement(By.xpath("//div[@class='container-fluid text-center']//a[text()='Bootstrap Date Picker']"));
-        bootstrapDataPicker.click();
-        WebElement dataExampleSelectDay = driver.findElement(By.xpath("//div[@id='sandbox-container1']//input[@class='form-control']"));
-        dataExampleSelectDay.click();
-        LocalDate yesterday =LocalDate.now().minusDays(1);
-        driver.findElement(By.xpath("//td[text()='"+yesterday.getDayOfMonth()+"' and @class='day']")).click();
+        driver.findElement(dataPickers).click();
+        driver.findElement(bootstrapDataPicker).click();
+        driver.findElement(dataExampleSelectDay).click();
+        LocalDate yesterday = LocalDate.now().minusDays(1);
+        driver.findElement(By.xpath("//td[text()='" + yesterday.getDayOfMonth() + "' and @class='day']")).click();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         String expectedDate = yesterday.format(formatter);
-        String selectDayField = driver.findElement(By.xpath("//div[@class='input-group date']//input[@type='text']")).getAttribute("value");
-        Assert.assertEquals(expectedDate,selectDayField);
+        String actualDate = driver.findElement(selectDayField).getAttribute("value");
+        Assert.assertEquals(expectedDate, actualDate);
     }
 }

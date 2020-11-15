@@ -9,6 +9,7 @@ public class Test7 extends Driver {
     private By ajaxFormSubmit = By.xpath("//ul[@id='treemenu']//ul//a[text()='Ajax Form Submit']");
     private By submitButton = By.xpath("//input[@id='btn-submit']");
     private By fieldName = By.xpath("//input[@id='title']");
+
     @Test
     public void checkName() {
         driver.findElement(inputForm).click();
