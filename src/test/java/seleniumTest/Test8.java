@@ -18,7 +18,7 @@ public class Test8 extends Driver {
         driver.findElement(dataPickers).click();
         driver.findElement(bootstrapDataPicker).click();
         driver.findElement(dataExampleSelectDay).click();
-        LocalDate yesterday = LocalDate.now().minusDays(1);
+        LocalDate yesterday = LocalDate.now().minusDays(2);
         driver.findElement(By.xpath("//td[text()='" + yesterday.getDayOfMonth() + "' and @class='day']")).click();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         String expectedDate = yesterday.format(formatter);
