@@ -5,13 +5,13 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 
 public class Test9 extends Driver {
-    private By table = By.xpath("//li[@class='tree-branch'][3]");
-    private By tableDataSearch = By.xpath("//div[@class='container-fluid text-center']//a[text()='Table Data Search']");
-    private By fieldTasks = By.xpath("//*[@id='task-table-filter']");
-    private By column1 = By.xpath("//table[@id='task-table']//tbody//tr[4]/td[1]");
-    private By column2 = By.xpath("//table[@id='task-table']//tbody//tr[4]/td[2]");
-    private By column3 = By.xpath("//table[@id='task-table']//tbody//tr[4]/td[3]");
-    private By column4 = By.xpath("//table[@id='task-table']//tbody//tr[4]/td[4]");
+    private final By table = By.xpath("//li[@class='tree-branch'][3]");
+    private final By tableDataSearch = By.xpath("//div[@class='container-fluid text-center']//a[text()='Table Data Search']");
+    private final By fieldTasks = By.xpath("//*[@id='task-table-filter']");
+    private final By column1 = By.xpath("//table[@id='task-table']//tbody//tr[4]/td[1]");
+    private final By column2 = By.xpath("//table[@id='task-table']//tbody//tr[4]/td[2]");
+    private final By column3 = By.xpath("//table[@id='task-table']//tbody//tr[4]/td[3]");
+    private final By column4 = By.xpath("//table[@id='task-table']//tbody//tr[4]/td[4]");
 
     @Test
     public void checkRecordAppears() {

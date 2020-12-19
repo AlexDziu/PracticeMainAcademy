@@ -5,10 +5,10 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 
 public class Test7 extends Driver {
-    private By inputForm = By.xpath("//a[text()='Input Forms']");
-    private By ajaxFormSubmit = By.xpath("//ul[@id='treemenu']//ul//a[text()='Ajax Form Submit']");
-    private By submitButton = By.xpath("//input[@id='btn-submit']");
-    private By fieldName = By.xpath("//input[@id='title']");
+    private final By inputForm = By.xpath("//a[text()='Input Forms']");
+    private final By ajaxFormSubmit = By.xpath("//ul[@id='treemenu']//ul//a[text()='Ajax Form Submit']");
+    private final By submitButton = By.xpath("//input[@id='btn-submit']");
+    private final By fieldName = By.xpath("//input[@id='title']");
 
     @Test
     public void checkName() {

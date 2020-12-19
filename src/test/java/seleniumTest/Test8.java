@@ -8,10 +8,10 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Test8 extends Driver {
-    private By dataPickers = By.xpath("//a[text()='Date pickers']");
-    private By bootstrapDataPicker = By.xpath("//div[@class='container-fluid text-center']//a[text()='Bootstrap Date Picker']");
-    private By dataExampleSelectDay = By.xpath("//div[@id='sandbox-container1']//input[@class='form-control']");
-    private By selectDayField = By.xpath("//div[@class='input-group date']//input[@type='text']");
+    private final By dataPickers = By.xpath("//a[text()='Date pickers']");
+    private final By bootstrapDataPicker = By.xpath("//div[@class='container-fluid text-center']//a[text()='Bootstrap Date Picker']");
+    private final By dataExampleSelectDay = By.xpath("//div[@id='sandbox-container1']//input[@class='form-control']");
+    private final By selectDayField = By.xpath("//div[@class='input-group date']//input[@type='text']");
 
     @Test
     public void checkDay() {

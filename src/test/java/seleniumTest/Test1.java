@@ -5,11 +5,11 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 
 public class Test1 extends Driver {
-    private By inputForm = By.xpath("//a[text()='Input Forms']");
-    private By simpleFormDemo = By.xpath("//*[@id='treemenu']//a[text()='Simple Form Demo']");
-    private By inputElement = By.xpath("//input[@id='user-message']");
-    private By buttonShowMassage = By.xpath("//form[@id='get-input']//button[@class='btn btn-default']");
-    private By yourMessage = By.xpath("//span[@id='display']");
+    private final By inputForm = By.xpath("//a[text()='Input Forms']");
+    private final By simpleFormDemo = By.xpath("//*[@id='treemenu']//a[text()='Simple Form Demo']");
+    private final By inputElement = By.xpath("//input[@id='user-message']");
+    private final By buttonShowMassage = By.xpath("//form[@id='get-input']//button[@class='btn btn-default']");
+    private final By yourMessage = By.xpath("//span[@id='display']");
 
     @Test
     public void checkYourMessage() {

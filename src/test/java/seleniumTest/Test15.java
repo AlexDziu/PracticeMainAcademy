@@ -6,14 +6,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class Test15 extends Driver {
-    private By others = By.xpath("//a[text()='Others']");
-    private By dynamicDataLoading = By.xpath("//li[@style]/a[text()='Dynamic Data Loading']");
-    private By buttonGetNewUser = By.id("save");
-    private By userAppear = By.cssSelector("#loading");
-    private By userImage = By.cssSelector("img");
+    private final By others = By.xpath("//a[text()='Others']");
+    private final By dynamicDataLoading = By.xpath("//li[@style]/a[text()='Dynamic Data Loading']");
+    private final By buttonGetNewUser = By.id("save");
+    private final By userAppear = By.cssSelector("#loading");
+    private final By userImage = By.cssSelector("img");
 
     @Test
-    public void test15() {
+    public void checkNamesIsNotEmpty() {
         driver.findElement(others).click();
         driver.findElement(dynamicDataLoading).click();
         driver.findElement(buttonGetNewUser).click();

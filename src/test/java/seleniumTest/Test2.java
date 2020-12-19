@@ -5,12 +5,12 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 
 public class Test2 extends Driver {
-    private By inputForm = By.xpath("//a[text()='Input Forms']");
-    private By simpleFormDemo = By.xpath("//*[@id='treemenu']//a[text()='Simple Form Demo']");
-    private By enterA = By.xpath("//form[@id='gettotal']//input[@id='sum1']");
-    private By enterB = By.xpath("//form[@id='gettotal']//input[@id='sum2']");
-    private By buttonGetTotal = By.xpath("//form[@id='gettotal']//button[@class='btn btn-default']");
-    private By totalResult = By.xpath("//*[@id='displayvalue']");
+    private final By inputForm = By.xpath("//a[text()='Input Forms']");
+    private final By simpleFormDemo = By.xpath("//*[@id='treemenu']//a[text()='Simple Form Demo']");
+    private final By enterA = By.xpath("//form[@id='gettotal']//input[@id='sum1']");
+    private final By enterB = By.xpath("//form[@id='gettotal']//input[@id='sum2']");
+    private final By buttonGetTotal = By.xpath("//form[@id='gettotal']//button[@class='btn btn-default']");
+    private final By totalResult = By.xpath("//*[@id='displayvalue']");
 
     @Test
     public void checkTotalNumbers() {

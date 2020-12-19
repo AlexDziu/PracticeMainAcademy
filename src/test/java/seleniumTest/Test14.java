@@ -10,14 +10,14 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Test14 extends Driver {
-    private By listBox = By.xpath("//a[text()='List Box']");
-    private By jqueryListBox = By.xpath("//li[@style]/a[text()='JQuery List Box']");
-    private By selectPickData = By.cssSelector("select.pickData");
-    private By buttonAdd = By.className("pAdd");
-    private By listResult = By.className("pickListResult");
+    private final By listBox = By.xpath("//a[text()='List Box']");
+    private final By jqueryListBox = By.xpath("//li[@style]/a[text()='JQuery List Box']");
+    private final By selectPickData = By.cssSelector("select.pickData");
+    private final By buttonAdd = By.className("pAdd");
+    private final By listResult = By.className("pickListResult");
 
     @Test
-    public void test14() {
+    public void checkText() {
         driver.findElement(listBox).click();
         driver.findElement(jqueryListBox).click();
         Select select = new Select(driver.findElement(selectPickData));

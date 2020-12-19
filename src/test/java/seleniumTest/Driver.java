@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Driver {
     WebDriver driver;
+
     @Before
     public void beforeTest() {
         WebDriverManager.chromedriver().setup();
@@ -20,9 +21,10 @@ public class Driver {
         driver = new ChromeDriver(options);
         driver.get("https://www.seleniumeasy.com/test/");
         driver.manage().window().maximize();
-        WebDriverWait wait = new WebDriverWait(driver,5);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='at-cv-lightbox-close']"))).click();
     }
+
     @After
     public void afterTest() {
         driver.quit();
